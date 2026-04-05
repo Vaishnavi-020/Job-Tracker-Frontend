@@ -16,7 +16,7 @@ def signup_page():
                 token=res.json()["access_token"]
                 st.session_state["token"]=token
                 st.session_state["signup_success"]=True
-                st.rerun
+                st.rerun()
             else: 
                 st.error("Something went wrong! Signup failed")
 

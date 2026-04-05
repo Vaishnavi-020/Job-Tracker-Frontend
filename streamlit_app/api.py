@@ -15,7 +15,7 @@ def get_applications(token):
                         headers={"Authorization":f"Bearer {token}"})
 
 def add_application(token,data):
-    return requests.post(f"{BASE_URL}/applications/new_application",
+    return requests.post(f"{BASE_URL}/application/new_application",
                          json=data,
                          headers={"Authorization":f"Bearer {token}"})
 
