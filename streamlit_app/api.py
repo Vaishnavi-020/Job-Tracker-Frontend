@@ -6,7 +6,9 @@ def signup(data):
     return requests.post(f"{BASE_URL}/auth/signup",json=data)
 
 def login(data):
-    return requests.post(f"{BASE_URL}/auth/login",json=data)
+    return requests.post(f"{BASE_URL}/auth/login",data={
+            "username": data["email"],
+            "password": data["password"]})
 
 def get_applications(token):
     return requests.get(f"{BASE_URL}/application/all_applications",
